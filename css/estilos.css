@@ -116,10 +116,20 @@ body {
 
 .contenido-portada {
   background-color: rgba(255, 255, 255, 0.6);
-  padding: 40px;
+  padding: 30px 20px;
   border-radius: 20px;
-  max-width: 600px;
+  max-width: 90%;
+  width: 500px;
   text-align: center;
+  margin: 0 auto;
+}
+
+/* Ajuste especial para pantallas muy chicas */
+@media (max-width: 480px) {
+  .contenido-portada {
+    padding: 20px 15px;
+    width: 95%;
+  }
 }
 
 .contenido-portada h1 {
@@ -562,8 +572,8 @@ body {
 
 /* 📸 Imagen del ícono (patita) */
 .logo img.logo-icono {
-  width: 24px;
-  height: 24px;
+  width: 30px;
+  height: 30px;
   animation: giroLogo 1s ease-out;
 }
 
