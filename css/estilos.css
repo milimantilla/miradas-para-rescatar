@@ -178,7 +178,7 @@ body {
 =========================== */
 .rescatados {
   background-color: #e76199;
-  padding: 80px 20px;
+  padding:  80px 20px 120px; /* espacio inferior aumentado */
   text-align: center;
 }
 
@@ -543,4 +543,53 @@ body {
 
 .whatsapp-float:hover img {
   transform: scale(1.1);
+}
+
+/* ✨ Estilo para el logo mejorado */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Pacifico', cursive;
+  color: #5a2d82;
+}
+
+/* AUMENTAMOS EL TAMAÑO ESPECÍFICAMENTE AL TEXTO */
+.logo span {
+  font-size: 3.2rem;
+}
+
+
+/* 📸 Imagen del ícono (patita) */
+.logo img.logo-icono {
+  width: 32px;
+  height: 32px;
+  animation: giroLogo 2s ease-out;
+}
+
+/* 🎬 Animación de entrada */
+.animada-logo {
+  opacity: 0;
+  animation: aparecerLogo 1.5s ease-out forwards;
+}
+
+/* 🎞️ Animaciones */
+@keyframes aparecerLogo {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes giroLogo {
+  from {
+    transform: rotate(-360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
 }
