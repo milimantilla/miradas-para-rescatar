@@ -1,0 +1,525 @@
+/* 🌐 RESET BÁSICO: elimina márgenes y rellenos por defecto */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 🧍 Estilo general del cuerpo del documento */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fdfdfd;
+  color: #333;
+  line-height: 1.6;
+  padding-top: 70px; /* espacio para que no se oculte la portada detrás de la navbar fija */
+}
+
+/* ===========================
+   🔷 BARRA DE NAVEGACIÓN
+=========================== */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #f5ec4c; /* amarillo */
+  backdrop-filter: blur(4px); /* podés dejarlo o quitarlo */
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .contenedor-nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar .logo {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #5a2d82;
+  text-decoration: none;
+}
+
+.navbar .menu {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.navbar .menu li a {
+  text-decoration: none;
+  color: #000; /* letras negras */
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.navbar .menu li a:hover {
+  color: #f27059;
+}
+
+.btn-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #333;
+}
+
+/* ===========================
+   🔻 RESPONSIVE NAVBAR (móvil)
+=========================== */
+@media (max-width: 768px) {
+  .navbar .menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 200px;
+     background-color: #f5ec4c; /* amarillo fuerte */
+     color: #000;               /* letras negras */
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+    gap: 1rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+  }
+
+  .navbar .menu.activo {
+    transform: translateX(0);
+  }
+
+  .btn-toggle {
+    display: block;
+  }
+}
+
+/* ===========================
+   🖼 PORTADA PRINCIPAL
+=========================== */
+.portada {
+  background-image: url("../imagenes/portada.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.contenido-portada {
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 40px;
+  border-radius: 20px;
+  max-width: 600px;
+  text-align: center;
+}
+
+.contenido-portada h1 {
+  font-size: 2.8rem;
+  color: #5a2d82;
+  margin-bottom: 15px;
+}
+
+.contenido-portada p {
+  font-size: 1.3rem;
+  color: #444;
+  margin-bottom: 25px;
+}
+
+.btn {
+  background-color: #f27059;
+  color: white;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background-color: #d95b45;
+}
+
+/* ===========================
+   💜 SECCIÓN: ¿QUIÉNES SOMOS?
+=========================== */
+.sobre-nosotros {
+  padding: 100px 20px 500px; /* ↑ aumentamos el padding-bottom a 120px */
+  background-color: #d1dbf3;
+  text-align: center;
+}
+
+.sobre-nosotros .contenedor {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.sobre-nosotros h2 {
+  font-size: 2.5rem;
+  color: #5a2d82;
+  margin-bottom: 20px;
+}
+
+.sobre-nosotros p {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+/* ===========================
+   🐾 SECCIÓN: RESCATADOS
+=========================== */
+.rescatados {
+  background-color: #e76199;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.rescatados h2 {
+  font-size: 2.5rem;
+  color: #5a2d82;
+  margin-bottom: 40px;
+}
+
+.galeria-rescatados {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.tarjeta {
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  width: 220px;
+  padding: 15px;
+  opacity: 1; /* será controlado por JS */
+  transition: all 0.6s ease;
+}
+
+.tarjeta img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.tarjeta h3 {
+  margin: 15px 0 5px;
+  color: #333;
+}
+
+.tarjeta p {
+  font-weight: bold;
+  color: #f27059;
+}
+
+/* ✨ Animación con JavaScript */
+.tarjeta.oculta {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.tarjeta.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===========================
+   ✉️ SECCIÓN: CONTACTO
+=========================== 
+.contacto {
+  padding: 80px 20px;
+  background-color: #4a37f3;
+  text-align: center;
+}
+
+.contacto .contenedor {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.contacto h2 {
+  font-size: 2.2rem;
+  color: #eb911b;
+  margin-bottom: 20px;
+}
+
+.contacto p {
+  font-size: 1.2rem;
+}*/
+/* ===========================
+   ✉️ SECCIÓN: CONTACTO
+=========================== */
+/* 📬 Sección: Contacto */
+.contacto {
+  background-color: #f3a565; /* fondo suave */
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.contacto h2 {
+  font-size: 2.5rem;
+  color: #5a2d82; /* púrpura igual que el resto */
+  margin-bottom: 20px;
+}
+
+.contacto p {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.contacto .contenedor {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.campo {
+  text-align: left;
+}
+
+.campo label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.campo input,
+.campo textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.campo input:focus,
+.campo textarea:focus {
+  border-color: #5a2d82;
+  outline: none;
+}
+
+.formulario .btn {
+  align-self: flex-start;
+  background-color: #5a2d82;
+  padding: 12px 30px;
+}
+
+.info-contacto {
+  margin-top: 40px;
+  text-align: left;
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.6;
+}
+/* 🔝 Estilo para el botón "Volver arriba" */
+.back-to-top {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background-color: #5a2d82;
+  color: white;
+  padding: 12px 16px;
+  font-size: 1.2rem;
+  border-radius: 50%;
+  text-decoration: none;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 1000;
+}
+
+.back-to-top:hover {
+  background-color: #f27059;
+  transform: scale(1.1);
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+/* ===========================
+   🌐 FOOTER PROFESIONAL
+=========================== */
+.footer {
+  background-color: #5a2d82;
+  color: white;
+  text-align: center;
+  padding: 30px 20px;
+  margin-top: 60px;
+}
+
+.contenedor-footer {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.footer p {
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+
+.redes-sociales a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.redes-sociales a:hover {
+  color: #f27059;
+}
+
+/* ===========================
+   💚 SECCIÓN: ¿CÓMO AYUDAR?
+=========================== */
+.como-ayudar {
+  background-color: #f1a956; /* amarillo claro */
+  padding: 100px 20px 500px;
+  text-align: center;
+}
+
+.ayuda-lista {
+  list-style: none;
+  padding: 0;
+  margin: 30px 0;
+  font-size: 1.2rem;
+  color: #444;
+}
+
+.ayuda-lista li {
+  margin-bottom: 15px;
+}
+
+.btn-donar {
+  background-color: #f27059;
+  color: white;
+  padding: 14px 30px;
+  font-size: 1rem;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.btn-donar:hover {
+  background-color: #d95b45;
+}
+
+/* ===========================
+   📦 SECCIÓN: ¿QUÉ NECESITAMOS?
+=========================== */
+.que-necesitamos {
+  background-color: #f76b6b; /* verde agua suave */
+  padding:100px 20px 500px;
+  text-align: center;
+}
+
+.lista-necesidades {
+  list-style: none;
+  padding: 0;
+  margin-top: 30px;
+  font-size: 1.2rem;
+  color: #333333;
+}
+
+.lista-necesidades li {
+  margin-bottom: 12px;
+}
+
+.que-necesitamos h2 {
+  font-size: 2.5rem;
+  color: #5a2d82;
+  margin-bottom: 20px;
+}
+.como-ayudar h2 {
+  font-size: 2.5rem;
+  color: #5a2d82;
+  margin-bottom: 20px;
+}
+/* 💸 SECCIÓN: OPCIONES PARA DONAR */
+.donar {
+  background-color: #498de6; /* coral claro */
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.donar h2 {
+  font-size: 2.5rem;
+  color: #5a2d82;
+  margin-bottom: 20px;
+}
+
+.opciones-donacion {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.donacion-item {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 250px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+.perros-especiales {
+  background-color: #8bee98;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.perros-especiales h2 {
+  font-size: 2.5rem;
+  color: #5a2d82;
+  margin-bottom: 20px;
+}
+
+/* Ajuste para que el menú fijo no tape las secciones al hacer clic */
+.seccion-ajustada {
+  position: relative;
+  padding-top: 120px;   /* sube el contenido 120px */
+  margin-top: -120px;   /* mueve la sección 120px hacia arriba */
+}
+
+/* 💖 Botón "Quiero donar" con efecto llamativo */
+.btn-donar {
+  animation: latido 1.5s infinite;
+  box-shadow: 0 0 15px rgba(242, 112, 89, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-donar:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 25px rgba(242, 112, 89, 0.7);
+}
+
+/* 💓 Animación de latido */
+@keyframes latido {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.06); }
+  100% { transform: scale(1); }
+}
