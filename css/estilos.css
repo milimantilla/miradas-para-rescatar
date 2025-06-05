@@ -233,23 +233,19 @@ body {
 }
 
 
-/*  Sección: Contacto */
+
+
+/* ================================
+   Sección: Contacto (limpia, sin espacios extra)
+================================ */
 .contacto {
-  background-color: #f3a565; /* fondo suave */
-  padding: 80px 20px;
+  background-color: #fdf9f5;   /* fondo suave */
+  padding-top: 50px;           /* espacio arriba */
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-bottom: 30px;        /* espacio abajo moderado */
+  margin: 0;                   /* cero margen */
   text-align: center;
-}
-
-.contacto h2 {
-  font-size: 2.5rem;
-  color: #5a2d82; /* púrpura igual que el resto */
-  margin-bottom: 20px;
-}
-
-.contacto p {
-  font-size: 1.1rem;
-  color: #333;
-  margin-bottom: 30px;
 }
 
 .contacto .contenedor {
@@ -258,52 +254,115 @@ body {
   text-align: center;
 }
 
+.contacto h2 {
+  font-size: 2.4rem;
+  color: #5a2d82;
+  margin: 0 0 12px 0;   /* cero margen arriba, 12px abajo */
+}
 
+.contacto p {
+  font-size: 1.05rem;
+  color: #333;
+  margin: 0 0 20px 0;   /* cero margen arriba, 20px abajo */
+}
+
+/* Estilos del formulario (sin cambios) */
 .formulario {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 15px;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
-.campo {
-  text-align: left;
+.formulario .campo {
+  display: flex;
+  flex-direction: column;
 }
 
-.campo label {
-  display: block;
-  font-weight: bold;
+.formulario label {
+  font-weight: 500;
   margin-bottom: 5px;
-  color: #333;
 }
 
-.campo input,
-.campo textarea {
-  width: 100%;
-  padding: 12px;
+.formulario input,
+.formulario textarea {
+  padding: 10px;
   border: 1px solid #ccc;
   border-radius: 8px;
   font-size: 1rem;
-  transition: border-color 0.3s;
 }
 
-.campo input:focus,
-.campo textarea:focus {
-  border-color: #5a2d82;
-  outline: none;
+.formulario button {
+  background-color: #f27059;
+  color: #fff;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
 }
 
-.formulario .btn {
-  align-self: flex-start;
-  background-color: #5a2d82;
-  padding: 12px 30px;
+.formulario button:hover {
+  background-color: #d95b45;
 }
 
 .info-contacto {
-  margin-top: 40px;
-  text-align: left;
+  margin-top: 20px;      /* espacio razonable entre formulario y datos */
+}
+
+.info-contacto p {
+  margin: 5px 0;         /* separación entre líneas de datos */
   font-size: 1rem;
-  color: #444;
-  line-height: 1.6;
+  color: #333;
+}
+
+/* Ajustes responsivos para Contacto */
+@media (max-width: 768px) {
+  .contacto {
+    padding-top: 40px;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-bottom: 25px;
+  }
+  .contacto h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  .contacto p {
+    font-size: 1rem;
+    margin-bottom: 16px;
+  }
+  .formulario {
+    gap: 12px;
+  }
+  .info-contacto {
+    margin-top: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contacto {
+    padding-top: 30px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-bottom: 20px;
+  }
+  .contacto h2 {
+    font-size: 1.8rem;
+    margin-bottom: 8px;
+  }
+  .contacto p {
+    font-size: 0.95rem;
+    margin-bottom: 14px;
+  }
+  .formulario {
+    gap: 10px;
+  }
+  .info-contacto {
+    margin-top: 12px;
+  }
 }
 
 /* Estilo para el botón "Volver arriba" */
@@ -333,37 +392,77 @@ body {
   pointer-events: auto;
 }
 
-/* FOOTER PROFESIONAL*/
+/* ================================
+   Footer profesional (sin espacios extra)
+================================ */
 .footer {
   background-color: #5a2d82;
-  color: white;
+  color: #ffffff;
   text-align: center;
-  padding: 30px 20px;
-  margin-top: 60px;
+  padding-top: 20px;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-bottom: 20px;  /* espacio abajo */
+  margin: 0;              /* cero margen */
 }
 
 .contenedor-footer {
   max-width: 1000px;
   margin: 0 auto;
+  text-align: center;
 }
 
 .footer p {
-  margin-bottom: 15px;
+  margin: 0 0 10px 0;   /* cero margen arriba, 10px abajo */
   font-size: 1rem;
 }
 
 .redes-sociales a {
-  color: white;
+  color: #ffffff;
   text-decoration: none;
-  margin: 0 10px;
+  margin: 0 8px;
   font-weight: bold;
-  transition: color 0.3s;
+  transition: color 0.3s ease;
 }
 
 .redes-sociales a:hover {
   color: #f27059;
 }
 
+/* Ajustes responsivos para Footer */
+@media (max-width: 768px) {
+  .footer {
+    padding-top: 15px;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-bottom: 15px;
+  }
+  .footer p {
+    font-size: 0.95rem;
+    margin-bottom: 8px;
+  }
+  .redes-sociales a {
+    font-size: 0.95rem;
+    margin: 0 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding-top: 12px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-bottom: 12px;
+  }
+  .footer p {
+    font-size: 0.9rem;
+    margin-bottom: 6px;
+  }
+  .redes-sociales a {
+    font-size: 0.9rem;
+    margin: 0 5px;
+  }
+}
 /*  SECCIÓN: ¿CÓMO AYUDAR?*/
 .como-ayudar {
   background-color: #f1a956; /* amarillo claro */
