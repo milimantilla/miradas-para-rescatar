@@ -1417,3 +1417,154 @@ body {
 .whatsapp-float:hover img {
   transform: scale(1.1);
 }
+/* ======================================================
+   [RESPONSIVE] Ajustes generales para Tablets y Celular
+   Pega esto AL FINAL de tu estilos.css
+====================================================== */
+
+/* ————————————
+   1) Contenedores ﬂexibles
+   ———————————— */
+/* Asegura que tu contenedor principal nunca exceda el ancho de la pantalla */
+.contenedor,
+.contenedor-footer,
+.galeria-rescatados,
+.opciones-donacion {
+  width: 100%;
+  max-width: 1200px; /* Mantiene el límite en pantallas grandes */
+  margin: 0 auto;    /* Centra siempre */
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* ————————————
+   2) Ajustes de sección para Tablets (≤ 768px)
+   ———————————— */
+@media (max-width: 768px) {
+  /* H1, H2 más pequeños */
+  h1 {
+    font-size: 2.2rem !important;
+  }
+  h2 {
+    font-size: 2rem !important;
+  }
+
+  /* .contenido-portada más estrecho */
+  .contenido-portada {
+    width: 90% !important;
+    padding: 20px 15px !important;
+  }
+
+  /* Párrafos un poco más pequeños */
+  p {
+    font-size: 1rem !important;
+    line-height: 1.5 !important;
+  }
+
+  /* Ajusta padding de todas las secciones */
+  .sobre-nosotros,
+  .rescatados,
+  .perros-especiales,
+  .como-ayudar,
+  .donar,
+  .que-necesitamos,
+  .contacto {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+    padding-top: 60px !important;
+    padding-bottom: 60px !important;
+  }
+
+  /* Footer más estrecho y texto reducido */
+  .footer {
+    padding: 15px 15px !important;
+  }
+  .footer p,
+  .info-contacto p {
+    font-size: 0.95rem !important;
+  }
+
+  /* Menú hamburguesa: las opciones más grandes */
+  .navbar .menu li a {
+    font-size: 1.1rem !important;
+  }
+
+  /* Íconos sociales más pequeños */
+  .icono-red-social {
+    width: 28px !important;
+    height: 28px !important;
+  }
+  .redes-sociales {
+    gap: 16px !important;
+  }
+}
+
+/* ————————————
+   3) Ajustes de sección para Celular Pequeño (≤ 480px)
+   ———————————— */
+@media (max-width: 480px) {
+  /* H1, H2 aún más pequeños */
+  h1 {
+    font-size: 1.8rem !important;
+  }
+  h2 {
+    font-size: 1.6rem !important;
+  }
+
+  /* .contenido-portada full width */
+  .contenido-portada {
+    width: 95% !important;
+    padding: 15px 10px !important;
+  }
+
+  /* Párrafos más compactos */
+  p {
+    font-size: 0.95rem !important;
+    line-height: 1.4 !important;
+  }
+
+  /* Ajusta padding de todas las secciones */
+  .sobre-nosotros,
+  .rescatados,
+  .perros-especiales,
+  .como-ayudar,
+  .donar,
+  .que-necesitamos,
+  .contacto {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    padding-top: 50px !important;
+    padding-bottom: 50px !important;
+  }
+
+  /* Footer bien compacto */
+  .footer {
+    padding: 12px 10px !important;
+  }
+  .footer p,
+  .info-contacto p {
+    font-size: 0.9rem !important;
+  }
+
+  /* Menú hamburguesa: enlances más grandes */
+  .navbar .menu li a {
+    font-size: 1rem !important;
+  }
+
+  /* Íconos sociales aún más pequeños */
+  .icono-red-social {
+    width: 24px !important;
+    height: 24px !important;
+  }
+  .redes-sociales {
+    gap: 12px !important;
+  }
+
+  /* Botón flotante WhatsApp: un poco más pequeño y recortado */
+  .whatsapp-float {
+    width: 50px !important;
+    height: 50px !important;
+    bottom: 15px !important;
+    right: 15px !important;
+  }
+}
