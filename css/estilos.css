@@ -1,11 +1,11 @@
-/* 🌐 RESET BÁSICO: elimina márgenes y rellenos por defecto */
+/* RESET BÁSICO: elimina márgenes y rellenos por defecto */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* 🧍 Estilo general del cuerpo del documento */
+/*  Estilo general del cuerpo del documento */
 body {
   font-family: 'Segoe UI', sans-serif;
   background-color: #fdfdfd;
@@ -14,10 +14,8 @@ body {
   padding-top: 70px; /* espacio para que no se oculte la portada detrás de la navbar fija */
 }
 
-/* ===========================
-   🔷 BARRA DE NAVEGACIÓN
-=========================== */
-.navbar {
+/*  BARRA DE NAVEGACIÓN*/
+ .navbar {
   position: fixed;
   top: 0;
   left: 0;
@@ -70,9 +68,7 @@ body {
   color: #333;
 }
 
-/* ===========================
-   🔻 RESPONSIVE NAVBAR (móvil)
-=========================== */
+/* RESPONSIVE NAVBAR (móvil)*/
 @media (max-width: 768px) {
   .navbar .menu {
     position: absolute;
@@ -99,9 +95,7 @@ body {
   }
 }
 
-/* ===========================
-   🖼 PORTADA PRINCIPAL
-=========================== */
+/* PORTADA PRINCIPAL*/
 .portada {
   background-image: url("../imagenes/portada.jpeg");
   background-size: cover;
@@ -158,9 +152,7 @@ body {
   background-color: #d95b45;
 }
 
-/* ===========================
-   💜 SECCIÓN: ¿QUIÉNES SOMOS?
-=========================== */
+/* SECCIÓN: ¿QUIÉNES SOMOS? */
 .sobre-nosotros {
   padding: 100px 20px 500px; /* ↑ aumentamos el padding-bottom a 120px */
   background-color: #d1dbf3;
@@ -183,9 +175,7 @@ body {
   color: #333;
 }
 
-/* ===========================
-   🐾 SECCIÓN: RESCATADOS
-=========================== */
+/* SECCIÓN: RESCATADOS*/
 .rescatados {
   background-color: #e76199;
   padding:  80px 20px 120px; /* espacio inferior aumentado */
@@ -231,7 +221,7 @@ body {
   color: #f27059;
 }
 
-/* ✨ Animación con JavaScript */
+/*  Animación con JavaScript */
 .tarjeta.oculta {
   opacity: 0;
   transform: translateY(30px);
@@ -242,33 +232,8 @@ body {
   transform: translateY(0);
 }
 
-/* ===========================
-   ✉️ SECCIÓN: CONTACTO
-=========================== 
-.contacto {
-  padding: 80px 20px;
-  background-color: #4a37f3;
-  text-align: center;
-}
 
-.contacto .contenedor {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.contacto h2 {
-  font-size: 2.2rem;
-  color: #eb911b;
-  margin-bottom: 20px;
-}
-
-.contacto p {
-  font-size: 1.2rem;
-}*/
-/* ===========================
-   ✉️ SECCIÓN: CONTACTO
-=========================== */
-/* 📬 Sección: Contacto */
+/*  Sección: Contacto */
 .contacto {
   background-color: #f3a565; /* fondo suave */
   padding: 80px 20px;
@@ -340,7 +305,8 @@ body {
   color: #444;
   line-height: 1.6;
 }
-/* 🔝 Estilo para el botón "Volver arriba" */
+
+/* Estilo para el botón "Volver arriba" */
 .back-to-top {
   position: fixed;
   bottom: 25px;
@@ -366,9 +332,8 @@ body {
   opacity: 1;
   pointer-events: auto;
 }
-/* ===========================
-   🌐 FOOTER PROFESIONAL
-=========================== */
+
+/* FOOTER PROFESIONAL*/
 .footer {
   background-color: #5a2d82;
   color: white;
@@ -399,9 +364,7 @@ body {
   color: #f27059;
 }
 
-/* ===========================
-   💚 SECCIÓN: ¿CÓMO AYUDAR?
-=========================== */
+/*  SECCIÓN: ¿CÓMO AYUDAR?*/
 .como-ayudar {
   background-color: #f1a956; /* amarillo claro */
   padding: 100px 20px 500px;
@@ -434,9 +397,7 @@ body {
   background-color: #d95b45;
 }
 
-/* ===========================
-   📦 SECCIÓN: ¿QUÉ NECESITAMOS?
-=========================== */
+/* SECCIÓN: ¿QUÉ NECESITAMOS?*/
 .que-necesitamos {
   background-color: #f76b6b; /* verde agua suave */
   padding:100px 20px 500px;
@@ -465,7 +426,7 @@ body {
   color: #5a2d82;
   margin-bottom: 20px;
 }
-/* 💸 SECCIÓN: OPCIONES PARA DONAR */
+/*  SECCIÓN: OPCIONES PARA DONAR */
 .donar {
   background-color: #498de6; /* coral claro */
   padding: 80px 20px;
@@ -496,9 +457,17 @@ body {
   font-size: 1rem;
   line-height: 1.6;
 }
+
 .perros-especiales {
   background-color: #8bee98;
   padding: 80px 20px;
+  text-align: center;
+}
+
+/* Sección: Perros especiales */
+.perros-especiales {
+  background-color: #a1f0b8;
+  padding: 80px 20px 120px; /* ↑ padding-bottom ampliado a 120px */
   text-align: center;
 }
 
@@ -508,14 +477,7 @@ body {
   margin-bottom: 20px;
 }
 
-/* Ajuste para que el menú fijo no tape las secciones al hacer clic */
-.seccion-ajustada {
-  position: relative;
-  padding-top: 120px;   /* sube el contenido 120px */
-  margin-top: -120px;   /* mueve la sección 120px hacia arriba */
-}
-
-/* 💖 Botón "Quiero donar" con efecto llamativo */
+/* Botón "Quiero donar" con efecto llamativo */
 .btn-donar {
   animation: latido 1.5s infinite;
   box-shadow: 0 0 15px rgba(242, 112, 89, 0.4);
@@ -527,13 +489,14 @@ body {
   box-shadow: 0 0 25px rgba(242, 112, 89, 0.7);
 }
 
-/* 💓 Animación de latido */
+/* Animación de latido */
 @keyframes latido {
   0%   { transform: scale(1); }
   50%  { transform: scale(1.06); }
   100% { transform: scale(1); }
 }
-/* 🟢 Estilo del botón flotante de WhatsApp */
+
+/* Estilo del botón flotante de WhatsApp */
 .whatsapp-float {
   position: fixed;
   bottom: 20px;
@@ -555,7 +518,7 @@ body {
   transform: scale(1.1);
 }
 
-/* ✨ Estilo para el logo mejorado */
+/* Estilo para el logo mejorado */
 .logo {
   display: flex;
   align-items: center;
@@ -570,7 +533,7 @@ body {
 }
 
 
-/* 📸 Imagen del ícono (patita) */
+/* Imagen del ícono (patita) */
 .logo img.logo-icono {
   width: 30px;
   height: 30px;
@@ -589,13 +552,13 @@ body {
   }
 }
 
-/* 🎬 Animación de entrada */
+/* Animación de entrada */
 .animada-logo {
   opacity: 0;
   animation: aparecerLogo 1.5s ease-out forwards;
 }
 
-/* 🎞️ Animaciones */
+/*Animaciones */
 @keyframes aparecerLogo {
   from {
     transform: translateY(-20px);

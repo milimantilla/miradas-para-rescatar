@@ -4,12 +4,12 @@ document.addEventListener("DOMContentLoaded", function () {
   const menu = document.querySelector(".navbar .menu");
   const enlaces = document.querySelectorAll(".navbar .menu a");
 
-  // ✅ Mostrar u ocultar el menú al hacer clic en el botón ☰
+  // Mostrar u ocultar el menú al hacer clic en el botón ☰
   toggleBtn.addEventListener("click", () => {
     menu.classList.toggle("activo");
   });
 
-  // ✅ Cerrar el menú automáticamente al hacer clic en una opción
+  // Cerrar el menú automáticamente al hacer clic en una opción
   enlaces.forEach((enlace) => {
     enlace.addEventListener("click", () => {
       menu.classList.remove("activo");
